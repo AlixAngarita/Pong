@@ -70,6 +70,9 @@ public class BallMovement : MonoBehaviour
             script = player.GetComponent<Score>();
             script.scoreValue ++;
             transform.position = new Vector2(0,0);
+            //change paddle length with each point
+            gameManager.ShinkPad(player1);
+            //for game over
             if(script.scoreValue >= script.MaxScore)
             {
                 gameManager.OnGameOver(player);
@@ -79,7 +82,7 @@ public class BallMovement : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if(other.tag == "Pad")
+        if(other.tag == "Pad1" || other.tag == "Pad2")
         {
             hitSound.Play();
             direction.x = -direction.x;

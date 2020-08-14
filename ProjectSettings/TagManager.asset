@@ -8,6 +8,8 @@ TagManager:
   - Pad
   - Player1
   - Player2
+  - Pad1
+  - Pad2
   layers:
   - Default
   - TransparentFX

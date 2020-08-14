@@ -16,7 +16,7 @@ public class PadMovement : MonoBehaviour
 
     private Rigidbody2D _rigidbody2D;
     private float xOff;
-    private float padLimit = 4.0f;
+    private float padLimit = 3.5f;
     // Start is called before the first frame update
     void Start()
     {
